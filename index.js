@@ -16,9 +16,14 @@ let massStr =""
 
 
 convertBtn.addEventListener("click", function(){
-    convertLength()
-    convertVolume()
-    convertMass()
+    if(!isNaN(inputEl.value)){
+        convertLength()
+        convertVolume()
+        convertMass()
+    }else{
+        alert("input is not number")
+    }
+    
 })
 
 function convertLength(){
